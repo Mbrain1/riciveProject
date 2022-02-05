@@ -1,0 +1,8 @@
+.nav {
+    background: #FFFFFF;
+    /* Navbar Shadow */
+
+    box-shadow: 0px 1px 0px #E5E9F2;
+    display: flex;
+    height: 4.5rem;
+}

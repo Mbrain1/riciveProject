@@ -1,0 +1,61 @@
+.clip {
+    height: 100%;
+    clip-path: polygon(0 84%, 100% 57%, 100% 100%, 0% 100%);
+    background-color: #12362A;
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+    left: 0rem;
+    z-index: -1;
+}
+
+.clipExt {
+    height: 20%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    background-color: #12362A;
+    position: absolute;
+    bottom: -4rem;
+    width: 100%;
+    left: 0rem;
+    z-index: -1;
+}
+
+.bands{
+    margin-top: 3rem;
+}
+.leftBand {
+    transform: rotate(178deg);
+    position: absolute;
+    top: 64%;
+    left: -1rem;
+}
+ .leftBand1 {
+    transform: rotate(178deg);
+    position: absolute;
+    top: 70%;
+    left: -1rem;
+}
+.leftBand2 {
+    transform: rotate(178deg);
+    position: absolute;
+    top: 77%;
+    left: -1rem;
+}
+.rightBand2 {
+    position: absolute;
+    right: 0;
+    top: 42%;
+}
+.rightBand1 {
+    position: absolute;
+    right: 0;
+    top: 18rem;
+    /* overflow: hidden; */
+    width: 25rem;
+}
+
+.rightBand {
+    position: absolute;
+    right: 1.5rem;
+    top: 16rem;
+}

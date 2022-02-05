@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .card {
+    background-color: theme('colors.white');
+    border-radius: theme('borderRadius.large');
+    box-shadow: theme('boxShadow.sm');
+  }
+  /* ... */
+
+  .container {
+    @apply md:w-[1000px] mx-auto px-5 md:px-0;
+  }
+
+  .bg-green-01 {
+    background: #EAF5D7;
+  }
+
+  .btn {
+    @apply py-4 px-12 bg-green-100 rounded text-white font-semibold;
+  }
+
+  .btn:hover {
+    @apply opacity-80;
+  }
+
+  .page-wrapper {
+    backgroun: #E5E5E5;
+    @apply relative overflow-hidden;
+  }
+
+}
