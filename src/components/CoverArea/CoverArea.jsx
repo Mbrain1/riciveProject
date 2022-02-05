@@ -7,9 +7,9 @@ import CoverImg from 'public/assets/images/joyce.png'
 import Quotes from 'public/assets/svgs/quote.svg'
 import Link from 'next/link';
 import styles from './CoverArea.module.css';
-import LeftBand from 'public/assets/svgs/leftband.svg'
-import LeftBand2 from 'public/assets/svgs/leftband2.svg'
-import LeftBand3 from 'public/assets/svgs/leftband3.svg'
+import LeftBand from 'public/assets/svgs/leftBand.svg'
+import LeftBand2 from 'public/assets/svgs/leftBand2.svg'
+import LeftBand3 from 'public/assets/svgs/leftBand3.svg'
 import RightBand from 'public/assets/svgs/rightBand.svg'
 import RightBand1 from 'public/assets/svgs/rightBand1.svg'
 import RightBand2 from 'public/assets/svgs/rightBand2.svg'

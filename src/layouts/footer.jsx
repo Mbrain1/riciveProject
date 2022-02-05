@@ -4,7 +4,7 @@ import LI from '../../public/assets/svgs/linkedIn.svg';
 import FB from '../../public/assets/svgs/facebook.svg';
 import TW from '../../public/assets/svgs/twitter.svg';
 import Location from '../../public/assets/svgs/Location.svg';
-import Message from '../../public/assets/svgs/Message.svg';
+import Mail from '../../public/assets/svgs/mail.svg';
 import Mobile from '../../public/assets/svgs/Mobile.svg';
 
 import Image from 'next/image'
@@ -55,7 +55,7 @@ export default function Footer() {
                     <p className="text-xl text-white"> Contact us </p>
                     <div className="grid md:grid-rows-3 my-8 gap-6">
                         <div className=" inline-flex items-center gap-2">
-                          <Image src={Message} alt="email"/>
+                          <Image src={Mail} alt="email"/>
                           <p className="text-sm text-gray-200"> Enter your email address here </p>
                         </div>
                         <div className=" inline-flex items-center gap-2">

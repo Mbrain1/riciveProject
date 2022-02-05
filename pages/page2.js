@@ -9,7 +9,7 @@ import LI from '/public/assets/svgs/linkedIn.svg';
 import FB from '/public/assets/svgs/facebook.svg';
 import TW from '/public/assets/svgs/twitter.svg';
 import Location from '/public/assets/svgs/Location.svg';
-import Message from '/public/assets/svgs/Message.svg';
+import Message from '/public/assets/svgs/message.svg';
 import Mobile from '/public/assets/svgs/Mobile.svg';
 import { Navigation, Pagination, Scrollbar, A11y,EffectCards } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
