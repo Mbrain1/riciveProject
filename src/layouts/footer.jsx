@@ -11,69 +11,70 @@ import Image from 'next/image'
 
 export default function Footer() {
     return (       
-        <div className="bg-green-900 md:h-116">
-            <div className="grid md:grid-cols-5 md:px-20 pt-6 md:pt-24">
-                <div>
-                    <div className="w-100 ml-3">
-                        <Image width={118} height={35} src={LogoWhite} alt="Ricive logo"/>
+          <footer className="bg-green-900 py-12">
+            <div className="container grid grid-cols-2 md:grid-cols-5 gap-y-10">
+                <div className="space-y-5 col-span-2 md:col-span-1 flex flex-col items-center md:items-start  ">
+                    <div>
+                        <img width={118} height={35} src="/assets/images/logoWhite.png" alt="Ricive logo"/>
                     </div>
-                    <div className="grid md:grid-cols-5 my-6">
-                        <Image width={24} height={24} src={IG} alt="Instagram"/>
-                        <Image width={24} height={24} src={TW} alt="Twitter"/>
-                        <Image width={24} height={24} src={LI} alt="LinkedIn"/>
-                        <Image width={24} height={24} src={FB} alt="Facebook"/>
+                    <div className="flex space-x-3">
+                        <img width={24} height={24} src="/assets/svgs/instagram.svg" alt="Instagram"/>
+                        <img width={24} height={24} src="/assets/svgs/twitter.svg" alt="Twitter"/>
+                        <img width={24} height={24} src="/assets/svgs/linkedIn.svg" alt="LinkedIn"/>
+                        <img width={24} height={24} src="/assets/svgs/facebook.svg" alt="Facebook"/>
                     </div>
                 </div>
 
-                <div>
+                <div className="space-y-5">
                     <p className="text-xl text-white"> Product </p>
-                    <div className="grid md:grid-rows-3 my-8 gap-6">
-                        <p className="text-base text-gray-200"> Individuals </p>
-                        <p className="text-base text-gray-200"> Patners </p>
-                        <p className="text-base text-gray-200"> Business </p>
+                    <div className="space-y-3 text-base text-gray-200">
+                        <p> Individuals </p>
+                        <p> Patners </p>
+                        <p> Business </p>
                     </div>
                 </div>
 
-                <div>
+                <div className="space-y-5">
                     <p className="text-xl text-white"> Pricing </p>
-                    <div className="grid md:grid-rows-3 my-8 gap-6">
-                        <p className="text-sm text-gray-200"> Laundry </p>
-                        <p className="text-sm text-gray-200"> Groceries </p>
+                    <div className="space-y-3 text-base text-gray-200">
+                        <p> Laundry </p>
+                        <p> Groceries </p>
                     </div>
                 </div>
 
-                <div>
+                <div className="space-y-5">
                     <p className="text-xl text-white"> Company </p>
-                    <div className="grid md:grid-rows-3 my-8 gap-6">
-                        <p className="text-sm text-gray-200"> About </p>
-                        <p className="text-sm text-gray-200"> FAQs </p>
-                        <p className="text-sm text-gray-200"> Careers </p>
+                    <div className="space-y-3 text-base text-gray-200">
+                        <p> About </p>
+                        <p> FAQs </p>
+                        <p> Careers </p>
                     </div>
                 </div>
 
-                <div>
+                <div className="space-y-5">
                     <p className="text-xl text-white"> Contact us </p>
-                    <div className="grid md:grid-rows-3 my-8 gap-6">
-                        <div className=" inline-flex items-center gap-2">
-                          <Image src={Mail} alt="email"/>
+                    <div className="space-y-3">
+                        <div className="flex space-x-3 items-start justify-start">
+                          <img src="assets/svgs/mail.svg" alt="email"/>
                           <p className="text-sm text-gray-200"> Enter your email address here </p>
                         </div>
-                        <div className=" inline-flex items-center gap-2">
-                          <Image src={Mobile} alt="phone"/>
+                        <div className="flex space-x-3 items-start justify-start">
+                          <img src="/assets/svgs/Mobile.svg" alt="phone"/>
                           <a href="tel:+2347061172646" className="text-sm text-gray-200"> +2347061172646 </a>
                         </div>
-                        <div className=" inline-flex items-baseline gap-2">
-                          <Image src={Location} className="mt-2" alt="location"/>
+                        <div className="flex space-x-3 items-start justify-start">
+                          <img src="/assets/svgs/Location.svg" className="mt-2" alt="location"/>
                           <p className="text-sm text-gray-200">
                             361 Herbert Macaulay Way, <br /> Yaba, 100001, Lagos.
                           </p>
                         </div>
                     </div>
                 </div>
-            </div>
 
 
-            <div className="md:px-24 pt-6">
+
+
+                 <div className="col-span-2 md:col-span-5 mt-12">
                 <hr />
                 <footer className="flex justify-between">
                     <div className="mt-8">
@@ -85,6 +86,8 @@ export default function Footer() {
                     </div>
                 </footer>
             </div>
-        </div>
+
+            </div>
+        </footer>
     )
 }

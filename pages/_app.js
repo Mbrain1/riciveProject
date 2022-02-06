@@ -10,7 +10,9 @@ function MyApp({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" />
     </Head>
+    <Layout>
     <Component {...pageProps} />
+    </Layout>
     </>
   )
 }
