@@ -9,10 +9,10 @@ const page2 = (props) => {
           
           <div className="container grid grid-cols-1 text-center text-white min-h-[70vh] py-12">
             
-            <div className="space-y-10 flex flex-col justify-center relative z-50">
+            <div className="space-y-10 flex flex-col justify-center relative z-30">
 
-            <h1 className="text-5xl font-black relative  z-50">Choose zero laundry days</h1>
-            <p className="text-lg relative z-50">Try out our laundry pricing calculator and schedule a pickup today</p>
+            <h1 className="text-5xl font-black relative  z-30">Choose zero laundry days</h1>
+            <p className="text-lg relative z-30">Try out our laundry pricing calculator and schedule a pickup today</p>
 
             <img src="/assets/svgs/dotted.svg" alt="dotted square 1" className="absolute top-0 right-5 md:right-28 z-10" />
             <img src="/assets/svgs/dotted.svg" alt="dotted square 1" className="absolute top-16 right-10 md:right-40 z-10" />
