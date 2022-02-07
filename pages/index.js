@@ -124,7 +124,7 @@ const page2 = (props) => {
                <div className="space-y-5">
 
                {["Grow your business, earn more.","Offer delivery options to walk-in customers."].map((item, index) => (
-                <div className="font-medium flex items-center space-x-3 text-xl">
+                <div className="font-medium flex items-center space-x-3 text-xl" key={index}>
                   <img src="/assets/svgs/check.svg"  /> 
                   <span>{item}</span>
                 </div>)) 
@@ -163,7 +163,7 @@ const page2 = (props) => {
                <div className="space-y-5">
 
                {["Improve your teams productivity.","Show your staff you care, beyond the work week."].map((item, index) => (
-                <div className="font-medium flex items-center space-x-3 text-xl">
+                <div className="font-medium flex items-center space-x-3 text-xl" key={index}>
                   <img src="/assets/svgs/check.svg"  /> 
                   <span>{item}</span>
                 </div>)) 
