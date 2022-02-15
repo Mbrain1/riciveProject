@@ -1,21 +1,58 @@
 import {useState,useEffect} from 'react';
 
+
+
+
+const comments = [
+{
+name:"Kuyekemi Ubi",
+title:"Software Engineer, Freelancer",
+comment:"I had a great and seamless experience using Ricive to satisfy my laundry needs. Saying goodbye to doing my laundry myself.",
+image:"person1.png"
+},
+
+{
+name:"Oluwatobi Adelua",
+title:"Payroll & Benefit Support Specialist, OysterHR.",
+comment:"Ricive is just a chat away from making my life easy in terms of laundry. Got introduced to them by a colleague of mine because getting a convenient and reliable laundry service has always been a concern to me. Now, I never have to worry about laundry anymore",
+image:"person3.png"
+},
+
+{
+name:"Seyi Babalola",
+title:"Business Analyst, CribMD.",
+comment:"You have a loyal customer in me. i received my clothes and all i have to say is i was impressed. Keep it up and don’t relent.",
+image:"person2.png"
+}
+];
 const Testimonial = (props) => {
 
-  const [currentStatus,setCurrentStatus] = useState(0);
+  const [selected,setSelected] = useState(0);
 
 
-  useEffect(() => {
+  const handleSelected = (selected) => {
 
-    if(currentStatus > 2){
-       setCurrentStatus(0)
-    }
 
-    if(currentStatus < 0){
-       setCurrentStatus(2)
-    }
+    if(selected > 2) return setSelected(0);
 
-  },[currentStatus])
+    if(selected < 0) return setSelected(2);
+    
+    setSelected(selected)
+
+  }
+
+
+   useEffect(() => {
+
+    const autoTestimonial = setInterval(() => handleSelected(++selected), 5000);
+
+    return () => clearInterval(autoTestimonial);
+
+  },[])
+
+
+
+
 
   return (
     <>
@@ -32,59 +69,42 @@ const Testimonial = (props) => {
 
 
 
-             <div className="testimonial-wrapper relative w-full md:w-3/5 mx-auto text-center text-lg">
+             <div className="testimonial-wrapper relative w-full md:w-3/5 mx-auto text-center text-lg px-5 md:px-0">
                
-                <div className={`transition-all duration-500 bg-white rounded-3xl  space-y-0   p-4 px-12 mt-10 left-0 ${currentStatus == 0 ? 'relative z-10' : currentStatus == 1 ? 'absolute opacity-60 mx-8 overflow-hidden z-[5] -top-5' : 'absolute opacity-40 mx-12 overflow-hidden z-[1] top-0'}`}>
-                
-                <p className="mt-10 font-medium h-40">“ I had a great and seamless experience using Ricive to satisfy my laundry needs. Saying goodbye to doing my laundry myself. “</p>
+               
 
-                <footer className={`space-y-3 ${currentStatus != 0 && 'invisible' }`}>
-                  <h3 className="font-semibold">Kuyekemi Ubi</h3>
-                  <div>Software Engineer, Freelancer</div>
+
+               {comments.map((item,index) => 
+
+                 <div className={`transition-all duration-500 bg-white rounded-3xl  space-y-0  p-4 px-12 mt-10 left-0 ${selected == index ? 'relative z-20' : index == 1 && selected == 2 ? 'testimonial-2' :  index == 1 || index == 0 ? 'testimonial-1' :  'testimonial-2' }`}>
+
+              
+               <div className={`${selected !== index && 'invisible' }`}>
+
+                <p className="mt-10 font-medium h-60 sm:h-40 overflow-hidden flex items-center md:items-start"><span>“{item.comment}“</span></p>
+
+                <footer className={`space-y-3`}>
+                  <h3 className="font-semibold">{item.name}</h3>
+                  <div>{item.title}</div>
                 </footer>
-
-                <img src="/assets/images/testimonial/person1.png" className="rounded-full  absolute -top-14 -left-0 md:-left-16" />
 
                </div>
 
-              <div className={`transition-all duration-500 bg-white rounded-3xl  space-y-0   p-4 px-12 mt-10 left-0 ${currentStatus == 1 ? 'relative z-10' : currentStatus == 2 ? 'absolute opacity-60 mx-8 overflow-hidden z-[5] -top-5' : 'absolute opacity-40 mx-12 overflow-hidden z-[1] top-0'}`}>
-                
-                <p className="mt-10 font-medium h-40">“Ricive is just a chat away from making my life easy in terms of laundry. Got introduced to them by a colleague of mine because getting a convenient and reliable laundry service has always been a concern to me. Now, I never have to worry about laundry anymore “</p>
-
-                <footer className={`space-y-3 ${currentStatus != 1 && 'invisible' }`}>
-                  <h3 className="font-semibold">Oluwatobi Adelua</h3>
-                  <div>Payroll & Benefit Support Specialist, OysterHR.</div>
-                </footer>
-
-                <img src="/assets/images/testimonial/person3.png" className="rounded-full  absolute -top-14 -left-0 md:-left-16" />
+                <img src={`/assets/images/testimonial/${item.image}`} className="rounded-full  absolute -top-14 -left-0 md:-left-16" />
 
                </div>
+               )}
 
-
-               <div className={`transition-all duration-500 bg-white rounded-3xl  space-y-0   p-4 px-12 mt-10 left-0 ${currentStatus == 2 ? 'relative z-10' : currentStatus == 0 ? 'absolute opacity-60 mx-8 overflow-hidden z-[5] -top-5' : 'absolute opacity-40 mx-12 overflow-hidden z-[1] top-0'}`}>
-                
-                <p className="mt-10 font-medium h-40">“You have a loyal customer in me. i received my clothes and all i have to say is i was impressed. Keep it up and don’t relent. “</p>
-
-                <footer className={`space-y-3 ${currentStatus != 2 && 'invisible' }`}>
-                  <h3 className="font-semibold">Seyi Babalola</h3>
-                  <div>Business Analyst, CribMD.</div>
-                </footer>
-
-                <img src="/assets/images/testimonial/person2.png" className="rounded-full  absolute -top-14 -left-0 md:-left-16" />
-
-               </div>
-
-             </div>
+             
+    </div>
 
              <div className="flex justify-center items-center space-x-2">
-                {[0,1,2].map((item,index) => <button onClick={() => setCurrentStatus(item)} key={index} className={`w-2 h-2 rounded-full ${currentStatus == item ? 'bg-green-800' : 'bg-white'}`}></button>)}
+                {[0,1,2].map((item,index) => <button onClick={() => handleSelected(item)} key={index} className={`w-2 h-2 rounded-full ${selected === index ? 'bg-green-800' : 'bg-white'}`}></button>)}
              </div>
 
-             <div className="hidden md:flex justify-between absolute items-center top-0 inset-x-32 top-[45%] opacity-80">
-                 {['left','right'].map((item,index) => <button onClick={() => setCurrentStatus(item == 'right' ? ++currentStatus : --currentStatus)} key={index} className="w-16 h-16 rounded-full bg-gray-400 text-green-100"><i className={`fas text-xl fa-chevron-${item}`}></i></button>)}
+             <div className="hidden md:flex justify-between absolute items-center top-0 sm:inset-x-10 md:inset-x-20 top-[45%] opacity-80">
+                 {['left','right'].map((item,index) => <button onClick={() => handleSelected(item == 'right' ? ++selected : --selected)} key={index} className="w-16 h-16 rounded-full bg-gray-400 text-green-100"><i className={`fas text-xl fa-chevron-${item}`}></i></button>)}
              </div>
-
-
 
         
         </div>

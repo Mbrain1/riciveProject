@@ -1,8 +1,20 @@
-import {useState} from 'react';
+import {useState,useRef,useEffect} from 'react';
 import Faq from "/src/components/Faq";
+import Product from "/src/components/services/Product";
 
 
 const page2 = (props) => {
+
+  const nav = useRef();
+  const [selected,setSelected] = useState(4);
+
+  useEffect(() => {
+    
+    nav.current.scrollLeft = (selected * 100);
+
+  },[selected])
+
+
   return (
     <>
           <div className="bg-green-01 relative  overflow-hidden">
@@ -26,14 +38,12 @@ const page2 = (props) => {
           <div className="rounded-full w-12 h-12 bg-green-800 absolute bottom-32 left-72 opacity-30"></div>
           
 
-          <nav className="md:flex md:justify-center md:items-center text-xl overflow-x-auto md:overflow-hidden">
-             <ul className="flex space-x-7">
-                <li><a href="#" className=" py-4 px-5 inline-block whitespace-nowrap font-medium opacity-50">Product</a></li>
-                <li><a href="#" className="py-4 px-5 inline-block whitespace-nowrap font-medium opacity-50">Software engineering</a></li>
-                <li><a href="#" className="py-4 px-5 inline-block whitespace-nowrap font-medium opacity-50">Marketing</a></li>
-                <li><a href="#" className="py-4 px-5 inline-block whitespace-nowrap font-medium opacity-50">Operations</a></li>
-                <li><a href="#" className="py-4 px-5 inline-block whitespace-nowrap font-medium text-green-100 border-b-8  border-green-100">View all</a></li>
-             </ul>
+          <nav className="md:flex md:justify-center md:items-center text-xl overflow-x-auto md:overflow-hidden scroll-smooth snap-mandatory snap-x" ref={nav}>
+             <div className="flex space-x-7">
+             {["Product","Software engineering","Marketing","Operations","View all"].map((item,index) => 
+                <button key={index} onClick={() => setSelected(index)} className={`snap-center py-4 px-5 inline-block whitespace-nowrap font-medium ${index == selected ? 'text-green-100 border-b-8  border-green-100' : 'opacity-50'}`}>{item}</button>
+              )}
+             </div>
           </nav>
       </div>
 
@@ -48,75 +58,9 @@ const page2 = (props) => {
         <h1 className="text-2xl font-bold">Open Roles</h1>
 
 
-        <div className="rounded border border-gray-200 px-12 py-9 space-y-5 text-lg">
-          
-            <h2 className="text-green-200">Design</h2>
 
-            <div className="font-medium text-xl">UI/UX Designer</div>
-
-            <div className="flex flex-col md:flex-row space-y-3 md:space-y-0 md:justify-between md:items-center">
-              <div className="space-x-7 opacity-50 flex">
-                <a href="#" className="flex items-center"><img src="/assets/svgs/location.svg" /> &nbsp; Remote</a>
-                <a href="#" className="flex items-center"><img src="/assets/svgs/clock.svg" /> &nbsp; Full-time position</a>
-              </div>
-
-              <a href="#" className="self-end text-green-100 flex space-x-3"><span>View job description</span>  <img src="/assets/svgs/arrow-right-up.svg" /></a>
-            </div>
-        </div>
-
-
-         <div className="rounded border border-gray-200 px-12 py-9 space-y-5 text-lg">
-          
-            <h2 className="text-green-200">Software Engineering</h2>
-
-            <div className="font-medium text-xl">Backend Developer</div>
-
-             <div className="flex flex-col md:flex-row space-y-3 md:space-y-0 md:justify-between md:items-center">
-              <div className="space-x-7 opacity-50 flex">
-                <a href="#" className="flex items-cente"><img src="/assets/svgs/location.svg" /> &nbsp; Remote</a>
-                <a href="#" className="flex items-cente"><img src="/assets/svgs/clock.svg" /> &nbsp; Contract</a>
-              </div>
-
-              <a href="#" className="self-end text-green-100 flex space-x-3"><span>View job description</span>  <img src="/assets/svgs/arrow-right-up.svg" /></a>
-            </div>
-        </div>
-
-
-
-
-         <div className="rounded border border-gray-200 px-12 py-9 space-y-5 text-lg">
-          
-            <h2 className="text-green-200">Marketing</h2>
-
-            <div className="font-medium text-xl">Growth marketer</div>
-
-             <div className="flex flex-col md:flex-row space-y-3 md:space-y-0 md:justify-between md:items-center">
-              <div className="space-x-7 opacity-50 flex">
-                <a href="#" className="flex items-cente"><img src="/assets/svgs/location.svg" /> &nbsp; Remote</a>
-                <a href="#" className="flex items-cente"><img src="/assets/svgs/clock.svg" /> &nbsp; Full-time position</a>
-              </div>
-
-              <a href="#" className="self-end text-green-100 flex space-x-3"><span>View job description</span>  <img src="/assets/svgs/arrow-right-up.svg" /></a>
-            </div>
-        </div>
-
-
-         <div className="rounded border border-gray-200 px-12 py-9 space-y-5 text-lg">
-          
-            <h2 className="text-green-200">Design</h2>
-
-            <div className="font-medium text-xl">UX Writer</div>
-
-             <div className="flex flex-col md:flex-row space-y-3 md:space-y-0 md:justify-between md:items-center">
-              <div className="space-x-7 opacity-50 flex">
-                <a href="#" className="flex items-cente"><img src="/assets/svgs/location.svg" /> &nbsp; Remote</a>
-                <a href="#" className="flex items-cente"><img src="/assets/svgs/clock.svg" /> &nbsp; Contract</a>
-              </div>
-
-              <a href="#" className="self-end text-green-100 flex space-x-3"><span>View job description</span>  <img src="/assets/svgs/arrow-right-up.svg" /></a>
-            </div>
-        </div>
-
+        {selected === 0 ?  <Product /> : selected === 1 ? <Product /> : selected === 2 ? <Product /> : selected === 3 ? <Product /> : <Product />}
+        
 
             
         </div>

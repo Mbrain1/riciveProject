@@ -9,36 +9,36 @@ export default function Footer() {
                         <img width={118} height={35} src="/assets/images/logo/logoWhite.png" alt="Ricive logo"/>
                     </div>
                     <div className="flex space-x-3">
-                        <img width={24} height={24} src="/assets/svgs/instagram.svg" alt="Instagram"/>
-                        <img width={24} height={24} src="/assets/svgs/twitter.svg" alt="Twitter"/>
-                        <img width={24} height={24} src="/assets/svgs/linkedIn.svg" alt="LinkedIn"/>
-                        <img width={24} height={24} src="/assets/svgs/facebook.svg" alt="Facebook"/>
+                        <a href="#" target="_blank"><img width={24} height={24} src="/assets/svgs/instagram.svg" alt="Instagram" /></a>
+                        <a href="#" target="_blank"><img width={24} height={24} src="/assets/svgs/twitter.svg" alt="Twitter"/></a>
+                        <a href="#" target="_blank"><img width={24} height={24} src="/assets/svgs/linkedIn.svg" alt="LinkedIn"/></a>
+                        <a href="#" target="_blank"><img width={24} height={24} src="/assets/svgs/facebook.svg" alt="Facebook"/></a>
                     </div>
                 </div>
 
                 <div className="space-y-5">
                     <p className="text-xl text-white"> Product </p>
                     <div className="space-y-3 text-base text-gray-200">
-                        <p> Individuals </p>
-                        <p> Patners </p>
-                        <p> Business </p>
+                        <p> <a href="#"> Individuals </a> </p>
+                        <p> <a href="#"> Patners </a> </p>
+                        <p> <a href="#"> Business </a> </p>
                     </div>
                 </div>
 
                 <div className="space-y-5">
                     <p className="text-xl text-white"> Pricing </p>
                     <div className="space-y-3 text-base text-gray-200">
-                        <p> Laundry </p>
-                        <p className="flex space-x-2"> <span>Groceries</span> <button className="rounded-full px-3 text-xs py-1.5 text-green-200 bg-white">Coming Soon</button> </p>
+                        <p> <a href="#"> Laundry </a> </p>
+                        <p className="flex space-x-2"> <a href="#">Groceries</a> <button className="rounded-full px-3 text-xs py-1.5 text-green-200 bg-white">Coming Soon</button> </p>
                     </div>
                 </div>
 
                 <div className="space-y-5">
                     <p className="text-xl text-white"> Company </p>
                     <div className="space-y-3 text-base text-gray-200">
-                        <p> About </p>
-                        <p> FAQs </p>
-                        <p> Careers </p>
+                        <p> <a href="#"> About </a> </p>
+                        <p> <a href="#"> FAQs </a> </p>
+                        <p> <a href="#"> Careers </a> </p>
                     </div>
                 </div>
 
