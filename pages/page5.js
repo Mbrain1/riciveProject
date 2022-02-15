@@ -39,14 +39,14 @@ const page2 = (props) => {
             <div className="rounded-full w-20 h-20 opacity-5 bg-green-300 absolute top-44 left-24"></div>
 
 
-            <div className="rounded-full w-40 h-40 opacity-5 bg-green-300 absolute -bottom-10 right-0"></div>
+            <div className="rounded-full w-40 h-40 opacity-5 bg-green-300 absolute -bottom-10 right-0 z-20"></div>
             <div className="rounded-full w-20 h-20 opacity-5 bg-green-300 absolute bottom-28 -right-10"></div>
 
 
-             <nav className="md:flex md:justify-center md:items-center text-xl text-white overflow-x-auto md:overflow-hidden scroll-smooth snap-mandatory snap-x" ref={nav}>
+          <nav className="md:flex md:justify-center md:items-center text-xl text-white relative z-30 overflow-x-auto md:overflow-hidden scroll-smooth snap-mandatory snap-x" ref={nav}>
              <div className="flex space-x-7">
              {["Wash & Fold","Wash & Iron","Ironing only","Drycleaning"].map((item,index) => 
-                <button key={index} onClick={() => setSelected(index)} className={`snap-center py-4 px-5 inline-block font-medium whitespace-nowrap  ${index == selected && 'text-green-100 border-b-8  border-green-100' }`}>{item}</button>
+                <button key={index} onClick={() => setSelected(index)} className={`snap-center py-4 px-5 font-medium whitespace-nowrap  ${index == selected ? 'text-green-100 border-b-8  border-green-100' : null}`}>{item}</button>
               )}
              </div>
           </nav>

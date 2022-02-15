@@ -28,10 +28,10 @@ export const PCView  = ({setIsProductOpen,setIsPricingOpen,isProductOpen,setIsOp
 
 
 
-             <button class="block md:hidden py-3 px-4 mx-2 rounded focus:outline-none hover:bg-grey-200 group" onClick={() => setIsOpen()}>
-                <div class="w-5 h-1 bg-black mb-1"></div>
-                <div class="w-5 h-1 bg-black mb-1"></div>
-                <div class="w-5 h-1 bg-black"></div>
+             <button className="block md:hidden py-3 px-4 mx-2 rounded focus:outline-none hover:bg-grey-200 group" onClick={() => setIsOpen()}>
+                <div className="w-5 h-1 bg-black mb-1"></div>
+                <div className="w-5 h-1 bg-black mb-1"></div>
+                <div className="w-5 h-1 bg-black"></div>
              </button>
 
         </nav>
@@ -43,11 +43,11 @@ export const PCView  = ({setIsProductOpen,setIsPricingOpen,isProductOpen,setIsOp
 
 export const MobileView  = ({setIsProductOpen,setIsPricingOpen,isProductOpen,setIsOpen,isOpen}) => {
     return(
-            <nav class={`z-50 fixed top-0 py-10 h-screen w-8/12 bg-white border  ${isOpen ? 'left-0 opacity-100' : '-left-full opacity-0'} transition-all duration-300`}>
-                    <ul class="flex flex-col items-center w-full text-base cursor-pointer">
+            <nav className={`z-50 fixed top-0 py-10 h-screen w-8/12 bg-white border  ${isOpen ? 'left-0 opacity-100' : '-left-full opacity-0'} transition-all duration-300`}>
+                    <ul className="flex flex-col items-center w-full text-base cursor-pointer">
 
 
-                       <li class="hover:bg-gray-200 py-4 px-6 w-full text-left">
+                       <li className="hover:bg-gray-200 py-4 px-6 w-full text-left">
                         <a className="flex"  onClick={() => setIsProductOpen()}>
                           <span>Product</span> &nbsp;
                           <img src={`/assets/svgs/arrow-down.svg`} alt="ArrowDown"  />
@@ -55,7 +55,7 @@ export const MobileView  = ({setIsProductOpen,setIsPricingOpen,isProductOpen,set
                       </li>
 
 
-                      <li class="hover:bg-gray-200 py-4 px-6 w-full text-left">
+                      <li className="hover:bg-gray-200 py-4 px-6 w-full text-left">
                         <a className="flex"  onClick={() => setIsPricingOpen()}>
                           <span>Pricing</span> &nbsp;
                           <img src={`/assets/svgs/arrow-down.svg`} alt="ArrowDown"  />

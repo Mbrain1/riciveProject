@@ -56,13 +56,13 @@ const Testimonial = (props) => {
 
   return (
     <>
-     <section className="py-12 relative md:px-10 px-5">
+     <section className="py-12 relative md:px-10">
          <img src="/assets/svgs/dotted.svg" alt="dotted alt" className="absolute top-0 left-0 z-10" />
          <img src="/assets/svgs/dotted.svg" alt="dotted alt" className="absolute bottom-0 right-0 z-10" />
         <div className="bg-gray-300 rounded-3xl py-12 space-y-20 relative z-50">
 
-            <header className="text-center space-y-10">
-              <h1 className="text-5xl font-black">Switch to Ricive - your clothes will thank you.</h1>
+            <header className="text-center space-y-10 px-5">
+              <h1 className="text-4xl md:text-5xl font-black">Switch to Ricive - your clothes will thank you.</h1>
               <p className="font-medium text-xl">Join a community of Africans saving valuable time.</p>
             </header>
 
@@ -90,7 +90,7 @@ const Testimonial = (props) => {
 
                </div>
 
-                <img src={`/assets/images/testimonial/${item.image}`} className="rounded-full  absolute -top-14 -left-0 md:-left-16" />
+                <img src={`/assets/images/testimonial/${item.image}`} className="rounded-full  absolute -top-14 -left-8 md:-left-16" />
 
                </div>
                )}
