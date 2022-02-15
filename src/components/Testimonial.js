@@ -76,7 +76,7 @@ const Testimonial = (props) => {
 
                {comments.map((item,index) => 
 
-                 <div className={`transition-all duration-500 bg-white rounded-3xl  space-y-0  p-4 px-12 mt-10 left-0 ${selected == index ? 'relative z-20' : index == 1 && selected == 2 ? 'testimonial-2' :  index == 1 || index == 0 ? 'testimonial-1' :  'testimonial-2' }`}>
+                 <div key={index} className={`transition-all duration-500 bg-white rounded-3xl  space-y-0  p-4 px-12 mt-10 left-0 ${selected == index ? 'relative z-20' : index == 1 && selected == 2 ? 'testimonial-2' :  index == 1 || index == 0 ? 'testimonial-1' :  'testimonial-2' }`}>
 
               
                <div className={`${selected !== index && 'invisible' }`}>
