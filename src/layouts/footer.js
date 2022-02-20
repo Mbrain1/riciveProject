@@ -3,8 +3,8 @@ import Image from 'next/image'
 export default function Footer() {
     return (       
           <footer className="bg-green-900 py-12">
-            <div className="container grid grid-cols-2 md:grid-cols-5 gap-y-10">
-                <div className="space-y-5 col-span-2 md:col-span-1 flex flex-col items-center md:items-start  ">
+            <div className="container grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-y-10">
+                <div className="space-y-5  col-span-2 sm:col-span-1  ">
                     <div>
                         <img width={118} height={35} src="/assets/images/logo/logoWhite.png" alt="Ricive logo"/>
                     </div>
@@ -16,7 +16,7 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <div className="space-y-5">
+                <div className="space-y-5 ">
                     <p className="text-xl text-white"> Product </p>
                     <div className="space-y-3 text-base text-gray-200">
                         <p> <a href="#"> Individuals </a> </p>
@@ -25,7 +25,7 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <div className="space-y-5">
+                <div className="space-y-5 ">
                     <p className="text-xl text-white"> Pricing </p>
                     <div className="space-y-3 text-base text-gray-200">
                         <p> <a href="#"> Laundry </a> </p>
@@ -33,7 +33,8 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <div className="space-y-5">
+
+                <div className="space-y-5 col-start-1 sm:col-start-2 lg:col-span-1 col-span-2 sm:col-span-1">
                     <p className="text-xl text-white"> Company </p>
                     <div className="space-y-3 text-base text-gray-200">
                         <p> <a href="#"> About </a> </p>
@@ -42,8 +43,8 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <div className="space-y-5">
-                    <p className="text-xl text-white"> Contact us </p>
+                <div className="space-y-5  col-span-2 sm:col-span-1">
+                    <p className="text-xl text-white sm:col-span-1"> Contact us </p>
                     <div className="space-y-3">
                         <div className="flex space-x-3 items-start justify-start">
                           <img src="assets/svgs/mail.svg" alt="email"/>
@@ -65,9 +66,9 @@ export default function Footer() {
 
 
 
-                 <div className="col-span-2 md:col-span-5 mt-12">
-                <hr />
-                <footer className="flex justify-between">
+                 <div className="col-span-2 sm:col-span-3 lg:col-span-5 mt-12 border-t border-stone-400">
+               
+                <footer className="flex justify-between ">
                     <div className="mt-8">
                         <p className="text-sm text-gray-200">&#169; {new Date().getFullYear()} Ricive. All rights reserved</p>
                     </div>

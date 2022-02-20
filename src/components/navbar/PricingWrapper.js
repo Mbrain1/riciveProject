@@ -1,6 +1,6 @@
  const PricingWrapper = ({isPricingOpen}) => {
     return(
-              <div className={`absolute bg-white inset-x-[10px] md:inset-x-1/4  md:w-2/4 top-20 z-50 p-7 space-y-10 transition-all duration-300 ${isPricingOpen ? 'z-50 opacity-100' : '-z-50 opacity-0'}`}>
+              <div className={`absolute bg-white inset-x-[10px] sm:inset-x-1/4  sm:w-2/4 top-20 z-50 p-7 space-y-10 transition-all duration-300 ${isPricingOpen ? 'z-[1000] opacity-100' : '-z-50 opacity-0'}`}>
                   <div className="space-y-3">
                      <h3 className="font-semibold">Laundry</h3>
                      <p className="text-sm">Resolve your laundry in minutes, find a plan that matches your pocket.</p>

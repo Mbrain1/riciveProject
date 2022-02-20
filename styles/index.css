@@ -44,4 +44,63 @@
   
   }
 
+
+   .text_1 {
+      animation: text1;
+    }
+
+    .text_2 {
+      animation: text2;
+    }
+
+    .text_3 {
+      animation: text3;
+    }
+
+
+    .text_1, .text_2,.text_3 {
+      overflow: hidden;
+      white-space: nowrap;
+      padding: 7px 0;
+      text-align: left;
+      width: 0;
+      display: inline-block;
+      position: relative;
+      animation-duration: 20s;
+      animation-timing-function: steps(10,end);
+      animation-iteration-count: infinite;
+    }
+
+  
+    @keyframes text1 {
+      0%,25% {
+        width: 0;
+      }
+      10%, 20% {
+        width: 7ch;
+      }
+    }
+
+    @keyframes text2 {
+      0%,10%,20%,30%,35%,55%{
+        width: 0;
+      }
+      
+      40%,50% {
+        width: 9ch;
+      }
+    }
+
+
+    @keyframes text3 {
+      0%,10%,20%,30%,40%,50%,60%,65%,95% {
+        width: 0;
+      }
+      
+      70%, 90% {
+        width: 6ch;
+      }
+    }
+
+
 }

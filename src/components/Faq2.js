@@ -20,14 +20,14 @@ const Faq = (props) => {
 
         <div className="container py-12">
                 <div className="space-y-12">
-                  <h2 className="text-2xl font-medium text-green-100 text-center">Frequently Asked Questions (FAQs)</h2>
+                  <h2 className="md:text-2xl font-bold text-green-100 text-center">Frequently Asked Questions (FAQs)</h2>
 
-                  <div className="md:ml-10 border rounded-lg">
+                  <div className="md:ml-10 border rounded-2xl ">
 
                   {faqs.map( (item,index) => 
-                      <div className="p-5 border-b" key={index}>
+                      <div className={`p-5 py-8 ${index < 2 ? 'border-b' : null}`} key={index}>
                         <h3 className="flex justify-between items-center cursor-pointer" onClick={() => toggle(index)}>
-                          <span className={`${selected === index  && 'text-green-100'} font-medium text-xl`}>{item.question}</span> 
+                          <span className={`${selected === index  && 'text-green-100'} font-medium md:text-xl`}>{item.question}</span> 
 
                           <i className={`fas ${selected === index ? 'fa-chevron-up text-gray-100' : 'fa-chevron-down'}`}></i>
                         </h3>

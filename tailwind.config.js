@@ -5,7 +5,8 @@ module.exports = {
     './src/layouts/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    colors: {
+    extend: {
+       colors: {
       'white': '#fff',
       'black': '#000000',
       'cvArea': '#EAF5D7',
@@ -27,8 +28,7 @@ module.exports = {
       'yellow': {
         900: '#F9A31B',
       }
-    },
-    extend: {
+         }
     },
   },
   plugins: [],

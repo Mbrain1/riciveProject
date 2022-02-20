@@ -3,7 +3,7 @@ export const PCView  = ({setIsProductOpen,setIsPricingOpen,isProductOpen,setIsOp
          <nav className="flex justify-between items-center container ">
             <img src="/assets/images/logo/logobig.png" />
 
-            <ul className="space-x-5 text-xl hidden md:flex">
+            <ul className="space-x-5 text-xl hidden sm:flex">
               <li className="">
               <a className="flex" href='#' onClick={() => setIsProductOpen()}>
                 <span>Product</span> &nbsp;
@@ -21,14 +21,14 @@ export const PCView  = ({setIsProductOpen,setIsPricingOpen,isProductOpen,setIsOp
               </li>
             </ul>
 
-            <div className="hidden md:flex space-x-3">
+            <div className="hidden sm:flex space-x-3">
                 <img src="/assets/images/app-store/google.png" />
                 <img src="/assets/images/app-store/apple.png" />
             </div>
 
 
 
-             <button className="block md:hidden py-3 px-4 mx-2 rounded focus:outline-none hover:bg-grey-200 group" onClick={() => setIsOpen()}>
+             <button className="block sm:hidden py-3 px-4 mx-2 rounded focus:outline-none hover:bg-grey-200 group" onClick={() => setIsOpen()}>
                 <div className="w-5 h-1 bg-black mb-1"></div>
                 <div className="w-5 h-1 bg-black mb-1"></div>
                 <div className="w-5 h-1 bg-black"></div>

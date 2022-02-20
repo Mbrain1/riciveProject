@@ -1,6 +1,6 @@
 const ProductWrapper = ({isPartnerOpen,isBusinessOpen,setIsBusinessOpen,setIsPartnerOpen,isProductOpen}) => {
     return(
-               <div className={`grid gap-10  absolute bg-white inset-x-[10px] md:inset-x-1/4 ${isPartnerOpen || isBusinessOpen ? 'md:w-3/4 grid-cols-2' : 'md:w-2/4 grid-cols-1'} top-20 z-50 px-7  ${isProductOpen ? 'z-50 opacity-100' : '-z-50 opacity-0'}`}>
+               <div className={`grid gap-10  absolute bg-white inset-x-[10px] sm:inset-x-1/4 ${isPartnerOpen || isBusinessOpen ? 'sm:w-3/4 grid-cols-2' : 'sm:w-2/4 grid-cols-1'} top-20 z-[1000] px-7  ${isProductOpen ? 'z-[1000] opacity-100' : '-z-50 opacity-0'}`}>
                  <div className="space-y-10 py-7">
                      <div className="space-y-3">
                        <h3 className="font-semibold">Individuals</h3>
