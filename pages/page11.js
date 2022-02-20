@@ -6,11 +6,11 @@ const page2 = (props) => {
     <>
      <section className="py-12 relative">
         <div className="container relative py-10">
-            <div className="space-y-5 md:px-10">
+            <div className="space-y-5 lg:px-10">
                <a className="font-medium flex space-x-5"><img src="/assets/svgs/arrow-back.svg" alt="Arrow back" /> <span>Back</span></a>
 
 
-              <div className="md:px-28 space-y-14">
+              <div className="lg:px-28 space-y-14">
 
                <h1 className="text-2xl font-semibold text-center">Schedule a pickup</h1>
 
@@ -19,7 +19,7 @@ const page2 = (props) => {
                      <h2 className="text-lg">Select a date</h2>
 
                     <div className="flex justify-between items-center">
-                      <div className="flex space-x-5 items-center font-semibold md:overflow-hidden overflow-x-scroll py-5">
+                      <div className="flex space-x-5 items-center font-semibold lg:overflow-hidden overflow-x-scroll py-5">
                         <button className="flex flex-col space-y-2 shadow-xl  rounded-lg py-5 px-5 items-center">
                             <span>17</span>
                             <span>MON</span>
@@ -78,20 +78,20 @@ const page2 = (props) => {
                 <div className="space-y-5">
                      <h2 className="text-lg">Which service would you like to use?</h2>
 
-                    <div className="flex flex-wrap  items-start ">
-                        <button className="rounded-lg mx-2 my-2 py-4 text-sm  px-10 text-green-100 border border-green-100">
+                    <div className="flex flex-nowrap  items-start overflow-x-auto ">
+                        <button className="rounded-lg whitespace-nowrap mx-2 my-2 py-4 text-sm  px-10 text-green-100 border border-green-100">
                             Wash & Fold
                         </button>
 
-                        <button className="rounded-lg mx-2 my-2 py-4 text-sm  px-10 bg-gray-300 opacity-70">
+                        <button className="rounded-lg whitespace-nowrap mx-2 my-2 py-4 text-sm  px-10 bg-gray-300 opacity-70">
                             Wash & Iron
                         </button>
 
-                        <button className="rounded-lg mx-2 my-2 py-4 text-sm  px-10 bg-gray-300 opacity-70">
+                        <button className="rounded-lg whitespace-nowrap mx-2 my-2 py-4 text-sm  px-10 bg-gray-300 opacity-70">
                             Ironing only
                         </button>
 
-                        <button className="rounded-lg mx-2 my-2 py-4 text-sm  px-10 bg-gray-300 opacity-70">
+                        <button className="rounded-lg whitespace-nowrap mx-2 my-2 py-4 text-sm  px-10 bg-gray-300 opacity-70">
                             Drycleaning
                         </button>
                     </div>
@@ -103,7 +103,8 @@ const page2 = (props) => {
 
 <form className="space-y-5">
  <h2>Please fill in your personal information correctly</h2>
-<div className="grid md:grid-cols-2 md:gap-6">
+<div className="grid sm:grid-cols-2 sm:gap-6">
+
     <div className="relative z-0 mb-6 w-full group">
         <input type="text"  className="rounded-lg placeholder-gray-100 text-base w-full border py-3 px-5 border-gray-100  focus:outline-0" placeholder="Your full name"  />
     </div>
@@ -122,8 +123,8 @@ const page2 = (props) => {
 
   </div>
 
- <div className="form-group flex justify-end md:col-span-2">
-                      <button className="btn">Schedule Pickup</button>
+ <div className="form-group flex sm:justify-center lg:justify-end sm:col-span-2">
+                      <button className="btn w-full sm:w-auto">Schedule Pickup</button>
   </div>
 
 </form>

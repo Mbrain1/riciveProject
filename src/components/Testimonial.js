@@ -56,20 +56,22 @@ const Testimonial = (props) => {
 
   return (
     <>
-     <section className="py-12 relative md:px-10">
+     <section className="py-12 relative px-5 sm:px-10">
          <img src="/assets/svgs/dotted.svg" alt="dotted alt" className="absolute top-0 left-0 z-10" />
          <img src="/assets/svgs/dotted.svg" alt="dotted alt" className="absolute bottom-0 right-0 z-10" />
+
+
         <div className="bg-gray-300 rounded-3xl py-12 space-y-20 relative z-50">
 
             <header className="text-center space-y-10 px-5">
-              <h1 className="text-4xl md:text-5xl font-black">Switch to Ricive - your clothes will thank you.</h1>
+              <h1 className="text-4xl sm:text-5xl font-black">Switch to Ricive - your clothes will thank you.</h1>
               <p className="font-medium text-xl">Join a community of Africans saving valuable time.</p>
             </header>
 
 
 
 
-             <div className="testimonial-wrapper relative w-full md:w-3/5 mx-auto text-center text-lg px-5 md:px-0">
+             <div className="testimonial-wrapper relative w-full sm:w-3/5 mx-auto text-center text-lg px-5 sm:px-0">
                
                
 
@@ -81,7 +83,7 @@ const Testimonial = (props) => {
               
                <div className={`${selected !== index && 'invisible' }`}>
 
-                <p className="mt-10 font-medium h-60 sm:h-40 overflow-hidden flex items-center md:items-start"><span>“{item.comment}“</span></p>
+                <p className="mt-10 font-medium h-60 sm:h-40 overflow-hidden flex items-center sm:items-start"><span>“{item.comment}“</span></p>
 
                 <footer className={`space-y-3`}>
                   <h3 className="font-semibold">{item.name}</h3>
@@ -90,7 +92,7 @@ const Testimonial = (props) => {
 
                </div>
 
-                <img src={`/assets/images/testimonial/${item.image}`} className="rounded-full  absolute -top-14 -left-8 md:-left-16" />
+                <img src={`/assets/images/testimonial/${item.image}`} className="rounded-full  absolute -top-14 -left-8 sm:-left-16" />
 
                </div>
                )}
@@ -102,7 +104,7 @@ const Testimonial = (props) => {
                 {[0,1,2].map((item,index) => <button onClick={() => handleSelected(item)} key={index} className={`w-2 h-2 rounded-full ${selected === index ? 'bg-green-800' : 'bg-white'}`}></button>)}
              </div>
 
-             <div className="hidden md:flex justify-between absolute items-center top-0 sm:inset-x-10 md:inset-x-20 top-[45%] opacity-80">
+             <div className="hidden sm:flex justify-between absolute items-center top-0 sm:inset-x-10 md:inset-x-20 top-[45%] opacity-80">
                  {['left','right'].map((item,index) => <button onClick={() => handleSelected(item == 'right' ? ++selected : --selected)} key={index} className="w-16 h-16 rounded-full bg-gray-400 text-green-100"><i className={`fas text-xl fa-chevron-${item}`}></i></button>)}
              </div>
 

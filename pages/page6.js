@@ -9,7 +9,7 @@ const page2 = (props) => {
           
           <div className="container grid grid-cols-1 min-h-[70vh] py-12 ">
             
-            <div className="space-y-10 flex flex-col justify-center items-start relative z-30">
+            <div className="space-y-10 flex flex-col justify-center text-center sm:text-left items-center sm:items-start relative z-30">
 
             <h1 className="text-2xl font-semibold relative  z-30 text-yellow-900">FAQs</h1>
             <h1 className="text-4xl font-black relative  z-30">Got questions? we have answers</h1>
@@ -84,7 +84,7 @@ const page2 = (props) => {
               </div>
 
 
-              <div className="flex justify-center text-2xl text-green-100 font-semibold space-x-3">
+              <div className="flex lg:justify-center text-2xl text-green-100 font-semibold space-x-3">
                  <a href="#">See more</a> <img src="/assets/svgs/arrow-to.svg" alt="Arrow right" />
               </div>
 

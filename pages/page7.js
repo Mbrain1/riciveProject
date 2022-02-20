@@ -5,15 +5,15 @@ import Faq from "/src/components/Faq";
 const page2 = (props) => {
   return (
     <>
-          <div className="relative grid md:grid-cols-2 min-h-[90vh]">
+          <div className="relative grid lg:grid-cols-2 min-h-[90vh]">
           
-            <div className="space-y-10 flex flex-col justify-center items-start relative z-30 order-2 md:order-1">
+            <div className="space-y-10 flex flex-col justify-center items-start relative z-30 order-2 sm:order-1">
 
           
             </div>   
 
 
-            <div className="space-y-10 flex flex-col justify-center items-center relative z-30 bg-green-900 text-white p-5 md:p-28 order-1 md:order-2">
+            <div className="space-y-10 flex flex-col text-center sm:text-left justify-center items-center relative z-30 bg-green-900 text-white p-5 sm:p-28 order-1 sm:order-2">
 
                 <h1 className="text-4xl font-bold relative leading-normal z-30">Fueled by our passion to solve for time</h1>
 
