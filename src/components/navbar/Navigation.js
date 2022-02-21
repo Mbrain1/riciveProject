@@ -43,7 +43,7 @@ export const PCView  = ({setIsProductOpen,setIsPricingOpen,isProductOpen,setIsOp
 
 export const MobileView  = ({setIsProductOpen,setIsPricingOpen,isProductOpen,setIsOpen,isOpen}) => {
     return(
-            <nav className={`z-50 fixed top-0 py-10 h-screen w-8/12 bg-white border  ${isOpen ? 'left-0 opacity-100' : '-left-full opacity-0'} transition-all duration-300`}>
+            <nav className={`z-[2000] fixed top-0 py-10 h-screen w-8/12 bg-white border  ${isOpen ? 'left-0 opacity-100' : '-left-full opacity-0'} transition-all duration-300`}>
                     <ul className="flex flex-col items-center w-full text-base cursor-pointer">
 
 

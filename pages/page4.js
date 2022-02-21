@@ -66,7 +66,7 @@ const page2 = (props) => {
 
      <section className="py-12 relative">
         <div className="container grid lg:grid-cols-2 gap-10 relative py-12">
-            <div className="flex flex-col justify-center items-center lg:items-start text-center lg:text-left space-y-10 order-2 sm:order-1 sm:px-10">
+            <div className="flex flex-col justify-center items-center lg:items-start text-center lg:text-left space-y-10 order-1  sm:px-10">
                <h1 className="text-5xl font-black">Choose your open hours</h1>
 
                <p className="font-medium text-xl">Be in control. You are open for business only when you say you are.</p>
@@ -76,7 +76,7 @@ const page2 = (props) => {
             </div>
             </div>
 
-            <div className="flex justify-center relative order-1 sm:order-2">
+            <div className="flex justify-center relative order-2">
               <img src="/assets/images/sales-person.png" className="z-40 relative" />
 
                 <img src="/assets/svgs/dotted.svg" alt="dotted square 1" className="absolute -top-10 -right-10 z-10" />
@@ -146,9 +146,9 @@ const page2 = (props) => {
 
         <img src="/assets/svgs/rectangle.svg" alt="dotted square 1" className="absolute bottom-0 right-0 z-10" />
 
-        <div className="rounded-3xl shadow-2xl bg-white py-[100px] mx-6 lg:mx-12 space-y-12 my-12 relative z-50 px-5">
+        <div className="rounded-3xl shadow-2xl bg-white py-[100px] sm:mx-6 lg:mx-12 space-y-12 my-12 relative z-50 px-5">
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-5  px-6 lg:px-12 mx-6 lg:mx-12 ">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-5  px-5 lg:px-12 sm:mx-6 lg:mx-12 ">
               <div className="space-y-5 lg:col-span-2 lg:order-1 order-2">
 
                 <h2 className="text-4xl font-black text-green-400 text-center lg:text-left">Get started in minutes</h2>

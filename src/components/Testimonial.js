@@ -61,7 +61,7 @@ const Testimonial = (props) => {
          <img src="/assets/svgs/dotted.svg" alt="dotted alt" className="absolute bottom-0 right-0 z-10" />
 
 
-        <div className="bg-gray-300 rounded-3xl py-12 space-y-20 relative z-50">
+        <div className="bg-gray-300 rounded-3xl py-12 space-y-16 sm:space-y-20 relative z-50">
 
             <header className="text-center space-y-10 px-5">
               <h1 className="text-4xl sm:text-5xl font-black">Switch to Ricive - your clothes will thank you.</h1>
@@ -100,13 +100,18 @@ const Testimonial = (props) => {
              
     </div>
 
+
+             <div className="flex sm:justify-between justify-center space-x-5 sm:absolute items-center sm:inset-x-10 md:inset-x-20 sm:top-[45%] opacity-80">
+                 {['left','right'].map((item,index) => <button onClick={() => handleSelected(item == 'right' ? ++selected : --selected)} key={index} className="w-16 h-16 rounded-full bg-gray-400 text-green-100"><i className={`fas text-xl fa-chevron-${item}`}></i></button>)}
+             </div>
+
+
+
              <div className="flex justify-center items-center space-x-2">
                 {[0,1,2].map((item,index) => <button onClick={() => handleSelected(item)} key={index} className={`w-2 h-2 rounded-full ${selected === index ? 'bg-green-800' : 'bg-white'}`}></button>)}
              </div>
 
-             <div className="hidden sm:flex justify-between absolute items-center top-0 sm:inset-x-10 md:inset-x-20 top-[45%] opacity-80">
-                 {['left','right'].map((item,index) => <button onClick={() => handleSelected(item == 'right' ? ++selected : --selected)} key={index} className="w-16 h-16 rounded-full bg-gray-400 text-green-100"><i className={`fas text-xl fa-chevron-${item}`}></i></button>)}
-             </div>
+            
 
         
         </div>
