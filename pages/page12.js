@@ -17,11 +17,7 @@ const page2 = (props) => {
      <section className="py-12">
         <div className="container">
             
-<<<<<<< HEAD
-            <table class="min-w-full">
-=======
             <table className="min-w-full">
->>>>>>> 4e55e0b537a8395d2ef33cf3a3e839dbfd148b3a
               <tbody>
                 <tr>
                   <td className="p-2">Duvet</td>
