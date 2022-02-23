@@ -6,7 +6,7 @@ module.exports = {
   ],
   theme: {
     extend: {
-       colors: {
+    colors: {
       'white': '#fff',
       'black': '#000000',
       'cvArea': '#EAF5D7',
@@ -21,6 +21,7 @@ module.exports = {
         100: '#4E903C',
         200: '#91CE33',
         400: '#128061',
+        700: '#133028',
         900: '#12362A',
         800: '#4BA87D',
         300: '#E6F9E1'
