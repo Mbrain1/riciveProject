@@ -27,7 +27,7 @@ const Faq = (props) => {
 
                    {faqs.map( (item,index) => 
                       <div className="space-y-3" key={index}>
-                        <h3 className="flex justify-between items-center cursor-pointer" onClick={() => toggle(index)}>
+                        <h3 className="flex justify-between items-center cursor-pointer space-x-2" onClick={() => toggle(index)}>
                           <span className={`${selected === index  && 'text-green-100'} font-medium text-xl`}>{item.question}</span> 
 
                           <i className={`fas ${selected === index ? 'fa-chevron-up text-gray-100' : 'fa-chevron-down'}`}></i>
