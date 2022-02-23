@@ -5,8 +5,10 @@ export const PCView  = ({setIsProductOpen,setIsPricingOpen,isProductOpen,setIsOp
     return(
          <nav className="flex justify-between items-center container ">
            <Link href="/" passHref>
-              <a> <img alt="" src="/assets/images/logobig.png" /></a>
+              <a> <img alt="" src="/assets/images/logo/logobig.png" /></a>
             </Link>
+
+
 
             <ul className="space-x-5 text-xl hidden md:flex">
 
