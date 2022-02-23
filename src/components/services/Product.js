@@ -1,7 +1,4 @@
-
 const Services = (props) => {
-
-
   return (
     <>
         <div className="rounded border border-gray-200 px-5 md:px-12 py-5 md:py-9 space-y-5 text-lg">

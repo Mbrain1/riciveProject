@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-/* eslint-disable @next/next/no-img-element */
->>>>>>> 4e55e0b537a8395d2ef33cf3a3e839dbfd148b3a
 const WashFold = (props) => {
 
 
@@ -15,11 +11,7 @@ const WashFold = (props) => {
                       <label>Select clothing item</label>
                       <select className="bg-white rounded w-100 border py-3 px-5 border-gray-200  focus:outline-0 appearance-none">
                         <option value="shirt">Shirt</option>
-<<<<<<< HEAD
-                        <option value="throwser">Throwser</option>
-=======
                         <option value="Trouser">Trouser</option>
->>>>>>> 4e55e0b537a8395d2ef33cf3a3e839dbfd148b3a
                       </select>
 
                        <i className="fas fa-chevron-down z-40 absolute right-5 top-[50px]"></i>
@@ -36,11 +28,7 @@ const WashFold = (props) => {
               <p className="font-medium text-sm"><span>Pricing applies to wearable clothing items only. Please refer to <span className="text-green-200">price list</span> for non-wearable items.</span></p>
             </div>
 
-<<<<<<< HEAD
-            <div className="flex justify-center relative shadow-2xl rounded p-10 flex flex-col items-center space-y-12">
-=======
             <div className="flex justify-center relative shadow-2xl rounded p-10 flex-col items-center space-y-12">
->>>>>>> 4e55e0b537a8395d2ef33cf3a3e839dbfd148b3a
             
                 <div className="text-gray-100 text-lg">Total price</div>
 
